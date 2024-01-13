@@ -1,19 +1,12 @@
-//
-//  ContentView.swift
-//  Entertainment
-//
-//  Created by James on 13/01/2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image(systemName: "tv.inset.filled")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Entertainment App")
         }
         .padding()
     }
