@@ -11,6 +11,14 @@
 		1A3EFEF52B52CE5D0000FE0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EFEF42B52CE5D0000FE0F /* ContentView.swift */; };
 		1A3EFEF72B52CE5E0000FE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EFEF62B52CE5E0000FE0F /* Assets.xcassets */; };
 		1A3EFEFA2B52CE5E0000FE0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EFEF92B52CE5E0000FE0F /* Preview Assets.xcassets */; };
+		1A3EFF012B52D1620000FE0F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EFF002B52D1620000FE0F /* data.json */; };
+		1A3EFF052B52D2380000FE0F /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EFF042B52D2380000FE0F /* Tab.swift */; };
+		1A3EFF072B52D40B0000FE0F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EFF062B52D40B0000FE0F /* HomeView.swift */; };
+		1A3EFF092B52D4140000FE0F /* EntertainmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EFF082B52D4140000FE0F /* EntertainmentView.swift */; };
+		1A3EFF0B2B52D4210000FE0F /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EFF0A2B52D4210000FE0F /* BookmarkView.swift */; };
+		1A3EFF0D2B52D6470000FE0F /* Entertainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EFF0C2B52D6470000FE0F /* Entertainment.swift */; };
+		1A3EFF102B52D6F50000FE0F /* EntertainmentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EFF0F2B52D6F50000FE0F /* EntertainmentContainer.swift */; };
+		1A3EFF122B52D7D10000FE0F /* EntertainmentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EFF112B52D7D10000FE0F /* EntertainmentResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		1A3EFEF42B52CE5D0000FE0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A3EFEF62B52CE5E0000FE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A3EFEF92B52CE5E0000FE0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A3EFF002B52D1620000FE0F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		1A3EFF042B52D2380000FE0F /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		1A3EFF062B52D40B0000FE0F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1A3EFF082B52D4140000FE0F /* EntertainmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentView.swift; sourceTree = "<group>"; };
+		1A3EFF0A2B52D4210000FE0F /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		1A3EFF0C2B52D6470000FE0F /* Entertainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entertainment.swift; sourceTree = "<group>"; };
+		1A3EFF0F2B52D6F50000FE0F /* EntertainmentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentContainer.swift; sourceTree = "<group>"; };
+		1A3EFF112B52D7D10000FE0F /* EntertainmentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				1A3EFEF22B52CE5D0000FE0F /* EntertainmentApp.swift */,
-				1A3EFEF42B52CE5D0000FE0F /* ContentView.swift */,
+				1A3EFF142B52E08E0000FE0F /* Enum */,
+				1A3EFF132B52E0750000FE0F /* Views */,
+				1A3EFF0E2B52D64B0000FE0F /* Model */,
+				1A3EFF022B52D16A0000FE0F /* JSON */,
 				1A3EFEF62B52CE5E0000FE0F /* Assets.xcassets */,
 				1A3EFEF82B52CE5E0000FE0F /* Preview Content */,
 			);
@@ -65,6 +84,43 @@
 				1A3EFEF92B52CE5E0000FE0F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A3EFF022B52D16A0000FE0F /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				1A3EFF002B52D1620000FE0F /* data.json */,
+				1A3EFF0F2B52D6F50000FE0F /* EntertainmentContainer.swift */,
+				1A3EFF112B52D7D10000FE0F /* EntertainmentResponse.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		1A3EFF0E2B52D64B0000FE0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A3EFF0C2B52D6470000FE0F /* Entertainment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A3EFF132B52E0750000FE0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A3EFEF42B52CE5D0000FE0F /* ContentView.swift */,
+				1A3EFF062B52D40B0000FE0F /* HomeView.swift */,
+				1A3EFF082B52D4140000FE0F /* EntertainmentView.swift */,
+				1A3EFF0A2B52D4210000FE0F /* BookmarkView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A3EFF142B52E08E0000FE0F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				1A3EFF042B52D2380000FE0F /* Tab.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3EFEFA2B52CE5E0000FE0F /* Preview Assets.xcassets in Resources */,
+				1A3EFF012B52D1620000FE0F /* data.json in Resources */,
 				1A3EFEF72B52CE5E0000FE0F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +194,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3EFF102B52D6F50000FE0F /* EntertainmentContainer.swift in Sources */,
+				1A3EFF0B2B52D4210000FE0F /* BookmarkView.swift in Sources */,
+				1A3EFF052B52D2380000FE0F /* Tab.swift in Sources */,
+				1A3EFF072B52D40B0000FE0F /* HomeView.swift in Sources */,
 				1A3EFEF52B52CE5D0000FE0F /* ContentView.swift in Sources */,
+				1A3EFF122B52D7D10000FE0F /* EntertainmentResponse.swift in Sources */,
+				1A3EFF092B52D4140000FE0F /* EntertainmentView.swift in Sources */,
+				1A3EFF0D2B52D6470000FE0F /* Entertainment.swift in Sources */,
 				1A3EFEF32B52CE5D0000FE0F /* EntertainmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
