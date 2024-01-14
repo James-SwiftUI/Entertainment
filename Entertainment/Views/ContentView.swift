@@ -8,21 +8,22 @@ struct ContentView: View {
         TabView(selection: $activeTab){
             HomeView()
                 .tag(Tab.home)
-                .tabItem { Tab.home.tabbedConted }
+                .tabItem { Tab.home.tabbedContent }
             
             EntertainmentView()
                 .tag(Tab.tv)
-                .tabItem { Tab.tv.tabbedConted }
+                .tabItem { Tab.tv.tabbedContent }
             
             EntertainmentView()
                 .tag(Tab.film)
-                .tabItem { Tab.film.tabbedConted }
+                .tabItem { Tab.film.tabbedContent }
             
             BookmarkView()
                 .tag(Tab.bookmark)
-                .tabItem { Tab.bookmark.tabbedConted }
+                .tabItem { Tab.bookmark.tabbedContent }
         }
         .tint(.red)
+        
     }
 }
 

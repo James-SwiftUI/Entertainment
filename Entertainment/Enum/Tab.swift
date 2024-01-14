@@ -7,7 +7,7 @@ enum Tab: String{
     case bookmark = "Bookmark"
     
     @ViewBuilder
-    var tabbedConted: some View{
+    var tabbedContent: some View{
         switch self{
         case .home:
             Image(systemName: "house")
