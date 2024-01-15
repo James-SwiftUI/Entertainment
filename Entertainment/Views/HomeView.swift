@@ -31,23 +31,12 @@ struct HomeView: View {
                 ToolbarItem(placement: .primaryAction){
                     Menu{
                         
-                        Button{
-                            setTheme(.systemDefault)
-                        }label: {
-                            Label("Default", systemImage: "person.2.badge.gearshape")
+                        Picker("Select Mode", selection: $userTheme){
+                            ForEach(Theme.allCases, id: \.self){ item in
+                                Text(item.rawValue)
+                            }
                         }
                         
-                        Button{
-                            setTheme(.light)
-                        }label: {
-                            Label("Light", systemImage: "sun.max")
-                        }
-                        
-                        Button{
-                            setTheme(.dark)
-                        }label: {
-                            Label("Dark", systemImage: "moon")
-                        }
                     }label: {
                         Label("Display", systemImage: "slider.horizontal.below.sun.max")
                             .imageScale(.large)
@@ -59,9 +48,6 @@ struct HomeView: View {
         }
     }
     
-    func setTheme(_ theme: Theme){
-        userTheme = theme
-    }
 }
 
 #Preview {
