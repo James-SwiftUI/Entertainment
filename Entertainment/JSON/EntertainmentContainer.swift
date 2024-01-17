@@ -5,8 +5,9 @@ actor EntertainmentContainer{
     
     @MainActor
     static func create(createDefaults: inout Bool)-> ModelContainer{
-        let schema = Schema([Entertainment.self])
+        let schema = Schema([Entertainment.self, Bookmark.self])
         let configuration = ModelConfiguration()
+        
         let container = try! ModelContainer(for: schema, configurations: configuration)
         
         

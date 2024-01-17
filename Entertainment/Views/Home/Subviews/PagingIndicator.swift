@@ -55,5 +55,12 @@ struct PagingIndicator: View {
 }
 
 #Preview {
-    TrendingView(images: [])
+    
+    let preview = PreviewContainer2()
+    preview.addExamples(Entertainment.examples)
+    
+    return TrendingView(images: Entertainment.examples)
+        .modelContainer(preview.container)
+        .previewLayout(.sizeThatFits)
+        
 }

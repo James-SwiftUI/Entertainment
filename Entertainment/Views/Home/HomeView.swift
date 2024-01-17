@@ -51,5 +51,8 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    let preview = PreviewContainer2()
+    preview.addExamples(Entertainment.examples)
+    return HomeView()
+        .modelContainer(preview.container)
 }

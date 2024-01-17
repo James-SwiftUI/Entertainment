@@ -26,6 +26,14 @@ class Entertainment{
     }
     
     
+    
+    
+    
+}
+
+
+extension Entertainment{
+    
     static let example = Entertainment(id: "5fa955fd-4818-462b-82d7-811de67d254a", title: "Beyond Earth", thumbnail: "beyond-earth", year: 2019, category: "Movie", rating: "PG", isBookmarked: false, isTrending: true)
     
     static let examples = [
@@ -35,7 +43,4 @@ class Entertainment{
         Entertainment(id: "93f9c1c0-0ff6-4b69-abb7-3e1568d60e98", title: "1998", thumbnail: "1998", year: 2021, category: "Movie", rating: "18+", isBookmarked: false, isTrending: true)
     ]
 }
-
-
-
  

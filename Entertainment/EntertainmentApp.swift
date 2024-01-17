@@ -8,9 +8,10 @@ struct EntertainmentApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabbedView()
         }
         .modelContainer(EntertainmentContainer.create(createDefaults: &firstTimeLaunch))
+        
         
     }
 }

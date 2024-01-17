@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct TabbedView: View {
     
     @State private var activeTab: Tab = .home
     
@@ -10,11 +10,11 @@ struct ContentView: View {
                 .tag(Tab.home)
                 .tabItem { Tab.home.tabbedContent }
             
-            EntertainmentView()
+            EntertainmentView(screenCategory: "TV Series")
                 .tag(Tab.tv)
                 .tabItem { Tab.tv.tabbedContent }
             
-            EntertainmentView()
+            EntertainmentView(screenCategory: "Movie")
                 .tag(Tab.film)
                 .tabItem { Tab.film.tabbedContent }
             
@@ -28,5 +28,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+   
+    TabbedView()
+        
 }
