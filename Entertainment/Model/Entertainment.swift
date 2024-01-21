@@ -1,8 +1,8 @@
-import Foundation
+import SwiftUI
 import SwiftData
 
 @Model
-class Entertainment{
+class Entertainment: ObservableObject{
     
     var id: String
     var title: String
@@ -26,7 +26,18 @@ class Entertainment{
     }
     
     
-    
+    var ratingColor: Color{
+        switch rating{
+        case "PG":
+               return .yellow
+        case "E":
+            return .green
+        case "18+":
+            return .red
+        default:
+            return .black
+        }
+    }
     
     
 }

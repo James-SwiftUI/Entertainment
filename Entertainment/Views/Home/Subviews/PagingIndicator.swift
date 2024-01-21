@@ -56,7 +56,7 @@ struct PagingIndicator: View {
 
 #Preview {
     
-    let preview = PreviewContainer2()
+    let preview = PreviewContainerEntertainment()
     preview.addExamples(Entertainment.examples)
     
     return TrendingView(images: Entertainment.examples)

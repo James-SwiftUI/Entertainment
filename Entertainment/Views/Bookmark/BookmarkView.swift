@@ -8,21 +8,27 @@ struct BookmarkView: View {
     
     var body: some View {
         NavigationStack {
-            List{
-                ForEach(items){ item in
-                    VStack(alignment: .leading){
-                        Text(item.title)
-                    }
-                    .swipeActions{
-                        Button(role: .destructive){
-                            context.delete(item)
-                        }label: {
-                            Label("Delete", systemImage: "trash")
-                                .symbolVariant(.fill)
+            Group{
+                if !items.isEmpty{
+                    List{
+                        ForEach(items){ item in
+                            VStack(alignment: .leading){
+                                Text(item.title)
+                            }
+                            .swipeActions{
+                                Button(role: .destructive){
+                                    context.delete(item)
+                                }label: {
+                                    Label("Delete", systemImage: "trash")
+                                        .symbolVariant(.fill)
+                                }
+                            }
                         }
+                        
                     }
+                }else{
+                    ContentUnavailableView("You no bookmarks",systemImage: "bookmark.slash", description: Text("Add a TV Series or Movie to your bookmark list"))
                 }
-                
             }
             .navigationTitle("Bookmarks")
             .toolbar{
@@ -41,7 +47,7 @@ struct BookmarkView: View {
 
 #Preview {
     
-    let preview = PreviewContainer()
+    let preview = PreviewContainerBookmark()
     preview.addExamples(Bookmark.sampleBookmarkedItems)
     
     return BookmarkView()
