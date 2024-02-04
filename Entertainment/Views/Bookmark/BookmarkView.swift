@@ -6,6 +6,8 @@ struct BookmarkView: View {
     @Query private var items: [Bookmark]
     @Environment(\.modelContext) var context
     
+    @Query private var pictures: [Entertainment]
+    
     var body: some View {
         NavigationStack {
             Group{
@@ -13,11 +15,12 @@ struct BookmarkView: View {
                     List{
                         ForEach(items){ item in
                             VStack(alignment: .leading){
-                                Text(item.title)
+                                BookmarkRow(item: item)
                             }
                             .swipeActions{
                                 Button(role: .destructive){
                                     context.delete(item)
+                                    addRemoveBookmark(item: item)
                                 }label: {
                                     Label("Delete", systemImage: "trash")
                                         .symbolVariant(.fill)
@@ -43,6 +46,15 @@ struct BookmarkView: View {
             }
         }
     }
+    
+    
+    func addRemoveBookmark(item: Bookmark) {
+        guard let itemID = pictures.firstIndex(where: { $0.id == item.id }) else { return }
+        pictures[itemID].isBookmarked.toggle()
+    }
+    
+    
+    
 }
 
 #Preview {

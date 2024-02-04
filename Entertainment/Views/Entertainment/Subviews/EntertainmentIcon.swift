@@ -9,7 +9,7 @@ struct EntertainmentIcon: View {
             Image(systemName: picture == "TV Series" ? "tv.circle" : "film.circle")
                 .font(.title3)
                 .foregroundStyle(.primary)
-            Text(picture)
+           
         }
         .foregroundStyle(.secondary)
         .fontWeight(.semibold)

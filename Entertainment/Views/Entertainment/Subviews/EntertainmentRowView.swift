@@ -12,7 +12,7 @@ struct EntertainmentRowView: View {
     
     
     var body: some View {
-        HStack{
+            HStack{
                         VStack(alignment: .leading){
                             ZStack(alignment: .topTrailing){
                                 Image(item.thumbnail)
@@ -31,6 +31,7 @@ struct EntertainmentRowView: View {
                                                 .font(.caption)
                                     }
                                 }
+                                .buttonStyle(.plain)
                                 
                                 
                                     .padding(8)
@@ -42,36 +43,32 @@ struct EntertainmentRowView: View {
                             Text(String(item.year))
                             EntertainmentIcon(picture: item.category)
                         }
+                       
                         Text(item.title)
-                            .fontWeight(.bold)
-                        ZStack{
-                            Circle()
-                                .foregroundColor(item.ratingColor)
-                                .frame(width: 34, height: 34)
-                            Text(item.rating)
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.white)
-                        }
+                                .fontWeight(.bold)
+                            
+                        FilmCategoryView(ratingColor: item.ratingColor, rating: item.rating)
+                            
+                    
+                        
 
                     }
+                    
             }
+        
     }
     
-    func addRemoveBookmark(item: Entertainment){
-        if let itemID = pictures.firstIndex(where: {
-            $0.id == item.id
-        }){
-            pictures[itemID].isBookmarked.toggle()
-            if(pictures[itemID].isBookmarked){
-                let bookmark = Bookmark(id: item.id, title: item.title, thumbnail: item.thumbnail, year: item.year, category: item.category, rating: item.rating)
-                context.insert(bookmark)
-            }else{
-                if let bookmarkID = items.firstIndex(where: { $0.id == item.id}){
-                    context.delete(items[bookmarkID])
-                }
-                
-                
+    func addRemoveBookmark(item: Entertainment) {
+        guard let itemIndex = pictures.firstIndex(where: { $0.id == item.id }) else { return }
+        
+        pictures[itemIndex].isBookmarked.toggle()
+        
+        if pictures[itemIndex].isBookmarked {
+            let bookmark = Bookmark(id: item.id, title: item.title, thumbnail: item.thumbnail, year: item.year, category: item.category, rating: item.rating)
+            context.insert(bookmark)
+        } else {
+            if let bookmarkID = items.firstIndex(where: { $0.id == item.id }) {
+                context.delete(items[bookmarkID])
             }
         }
     }

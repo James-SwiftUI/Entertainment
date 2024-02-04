@@ -18,12 +18,9 @@ struct HomeView: View {
                 TrendingView(images: filterTrending)
                 List{
                     ForEach(items){ item in
-                        VStack {
-                            Text(item.title)
-                            Image(item.thumbnail)
-                        }
+                        EntertainmentRowView(item: item)
                     }
-                }
+                }.listStyle(.plain)
                 
             }
             .preferredColorScheme(userTheme.colorScheme)
