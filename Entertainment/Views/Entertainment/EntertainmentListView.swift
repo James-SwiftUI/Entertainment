@@ -3,6 +3,10 @@ import SwiftData
 
 struct EntertainmentListView: View {
     
+    var columns: [GridItem] = [
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ]
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Entertainment]
     
@@ -25,11 +29,18 @@ struct EntertainmentListView: View {
     
     var body: some View {
         NavigationStack{
-            List(items){ item in
-                VStack(alignment: .leading){
-                    EntertainmentRowView(item: item)
+//            List(items){ item in
+//                VStack(alignment: .leading){
+//                    EntertainmentRowView(item: item)
+//                }
+//                
+//            }
+            ScrollView{
+                LazyVGrid(columns: columns){
+                    ForEach(items){ item in
+                        EntertainmentRowView(item: item)
+                    }
                 }
-                
             }
         }
     }

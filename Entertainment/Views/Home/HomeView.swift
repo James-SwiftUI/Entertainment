@@ -18,7 +18,7 @@ struct HomeView: View {
                 TrendingView(images: filterTrending)
                 List{
                     ForEach(items){ item in
-                        EntertainmentRowView(item: item)
+                        HomeRowView(item: item)
                     }
                 }.listStyle(.plain)
                 
