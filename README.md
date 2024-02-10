@@ -14,10 +14,8 @@ Users should be able to:
 - Search for relevant shows on all pages. I used a pull down search bar functionaility
 
 <p align="center">
-    <img src="./Photos/Home.png", width="200" />
-    
-    <img src"./Photos/Entertainment.png", width="200" />
-
-    <img src="./Photos/Bookmark.png", width="200" />
+    <img src="./Photos/Home.png", width="200"/>
+    <img src="./Photos/Entertainment.png", width="200"/>
+    <img src="./Photos/Bookmark.png", width="200"/>
 </p>
 
