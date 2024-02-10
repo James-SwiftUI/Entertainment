@@ -34,16 +34,16 @@ struct BookmarkView: View {
                 }
             }
             .navigationTitle("Bookmarks")
-            .toolbar{
-                ToolbarItem{
-                    Button{
-                        let item = Bookmark(id: "ABC123", title: "New Film", rating: "18+")
-                        context.insert(item)
-                    }label: {
-                        Label("Add", systemImage: "plus.circle")
-                    }
-                }
-            }
+//            .toolbar{
+//                ToolbarItem{
+//                    Button{
+//                        let item = Bookmark(id: "ABC123", title: "New Film", rating: "18+")
+//                        context.insert(item)
+//                    }label: {
+//                        Label("Add", systemImage: "plus.circle")
+//                    }
+//                }
+//            }
         }
     }
     
